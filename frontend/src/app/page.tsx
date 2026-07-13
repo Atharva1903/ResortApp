@@ -5,11 +5,16 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function Home() {
   return (
+    // Explicitly locking the main background color
     <div className="w-full bg-[#0B0E0C]">
       <Hero />
       
-      {/* Introduction Section */}
-      <section className="py-24 md:py-32 px-6 md:px-12 max-w-screen-2xl mx-auto">
+      {/* 
+        Introduction Section: 
+        The negative mt-[-4rem] pulls the content slightly into the Hero's fade path,
+        creating an organic overlap where text gracefully meets the cinematic header.
+      */}
+      <section className="relative z-30 py-24 md:py-32 px-6 md:px-12 max-w-screen-2xl mx-auto mt-[-4rem] sm:mt-[-6rem]">
         <SectionHeading 
           subtitle="Welcome" 
           title="A New Era of Eco-Tourism" 
@@ -20,12 +25,12 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
           {/* Card 1 */}
           <div className="group relative h-96 overflow-hidden bg-white/5 border border-white/10 p-8 flex flex-col justify-end transition-colors hover:border-[#D4AF37]/50">
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
             <FallbackImage 
-              src="/assets/about-preview.jpg" 
+              src="https://images.unsplash.com/photo-1542224566-6e85f2e6772f?q=80&w=800&auto=format&fit=crop" 
               fallbackSrc="https://images.unsplash.com/photo-1542224566-6e85f2e6772f?q=80&w=800&auto=format&fit=crop"
               alt="About" 
-              className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700" 
+              className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" 
             />
             <div className="relative z-20">
               <h3 className="text-2xl font-playfair text-white mb-3">Our Vision</h3>
@@ -38,12 +43,12 @@ export default function Home() {
           
           {/* Card 2 */}
           <div className="group relative h-96 overflow-hidden bg-white/5 border border-white/10 p-8 flex flex-col justify-end transition-colors hover:border-[#D4AF37]/50">
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
             <FallbackImage 
-              src="/assets/resort-preview.jpg" 
+              src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800&auto=format&fit=crop" 
               fallbackSrc="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800&auto=format&fit=crop"
               alt="Resort" 
-              className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700" 
+              className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" 
             />
             <div className="relative z-20">
               <h3 className="text-2xl font-playfair text-white mb-3">Existing Resort</h3>
@@ -56,12 +61,12 @@ export default function Home() {
           
           {/* Card 3 */}
           <div className="group relative h-96 overflow-hidden bg-white/5 border border-white/10 p-8 flex flex-col justify-end transition-colors hover:border-[#D4AF37]/50 lg:col-span-1 md:col-span-2">
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
             <FallbackImage 
-              src="/assets/proposal-preview.jpg" 
+              src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop" 
               fallbackSrc="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop"
               alt="Proposal" 
-              className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700" 
+              className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" 
             />
             <div className="relative z-20">
               <h3 className="text-2xl font-playfair text-white mb-3">Lease Proposal</h3>
