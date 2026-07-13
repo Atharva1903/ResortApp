@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #1e1e1e;
+  --background: #FFFDF7; /* Warm Ivory */
+  --foreground: #1c1c1c;
   
-  --forest-green: #1F5E3B;
+  --forest-green: #143621; /* Darker, richer forest green */
   --beige: #F5F5DC;
-  --earthy-brown: #8B4513;
-  --gold: #FFD700;
+  --earthy-brown: #5C3826;
+  --gold: #D4AF37; /* Luxury Gold */
   
-  /* Modern elegant typography options */
-  --font-heading: 'Inter', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
+  --font-cormorant: 'Cormorant Garamond', serif;
+  --font-inter: 'Inter', sans-serif;
 }
 
 @theme inline {
@@ -25,32 +25,62 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0d120f; /* very dark green tint */
-    --foreground: #F5F5DC;
+    --background: #0B0E0C; /* very dark green tint */
+    --foreground: #FFFDF7;
   }
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-body);
+  font-family: var(--font-inter);
   transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
+  font-family: var(--font-playfair);
+}
+
+.font-cormorant {
+  font-family: var(--font-cormorant);
+}
+
+.font-inter {
+  font-family: var(--font-inter);
 }
 
 /* Glassmorphism utilities */
 .glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-.glass-dark {
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--forest-green);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
 }
