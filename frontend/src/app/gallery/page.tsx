@@ -90,7 +90,7 @@ export default function GalleryPage() {
                 onClick={() => setSelectedImage(item.url)}
               >
                 <img src={item.url} alt={item.title} className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <span className="text-white font-playfair text-xl">{item.title}</span>
                 </div>
               </motion.div>
@@ -106,7 +106,7 @@ export default function GalleryPage() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedImage(null)}
-              className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 md:p-12 cursor-zoom-out"
+              className="fixed inset-0 z-100 flex items-center justify-center bg-black/95 p-4 md:p-12 cursor-zoom-out"
             >
               <button className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors text-4xl font-light z-50">&times;</button>
               <img src={selectedImage} alt="Fullscreen" className="max-w-full max-h-full object-contain" />
