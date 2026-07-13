@@ -25,11 +25,11 @@ export default function SectionHeading({ subtitle, title, description, centered 
         transition={{ duration: 0.6 }}
         className="flex items-center space-x-4 mb-6"
       >
-        {!centered && <div className="w-12 h-[1px] bg-[#D4AF37]"></div>}
+        {!centered && <div className="w-12 h-px bg-[#D4AF37]"></div>}
         <span className="text-[#D4AF37] font-inter tracking-[0.2em] text-xs uppercase font-medium">
           {subtitle}
         </span>
-        {centered && <div className="w-12 h-[1px] bg-[#D4AF37] hidden md:block"></div>}
+        {centered && <div className="w-12 h-px bg-[#D4AF37] hidden md:block"></div>}
       </motion.div>
       
       <motion.h2
